@@ -6,7 +6,7 @@ Enemigo::Enemigo(string n, int v, int a, string e)
 
 void Enemigo::atacar(Personaje &objetivo) {
 
-    cout << nombre << " ataca agresivamente ñojao >:( !\n";
+    cout << nombre << " ataca agresivamente nojao >:( !\n";
 
     objetivo.recibirDanio(ataque + 10);
 }
