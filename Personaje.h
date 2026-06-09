@@ -17,7 +17,15 @@ protected:
 public:
     Personaje(string n, int v, int a, string e);
 
-    virtual void atacar(Personaje &objetivo) = 0;
+    virtual void atacar(Personaje &objetivo)=0;
+
+    void curar(int cantidad);
+
+    void activarGuardia();
+
+    void setEmocion(string e);
+
+    string getEmocion();
 
     void recibirDanio(int danio);
 
