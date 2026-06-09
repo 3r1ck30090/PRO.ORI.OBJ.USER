@@ -2,23 +2,29 @@
 
 int main() {
 
-    Aliado omori("Omori", 100, 20, "Neutral");
-    Aliado aubrey("Aubrey", 120, 18, "Enojada");
-    Aliado kel("Kel", 90, 15, "Feliz");
-    Aliado hero("Hero", 110, 12, "Triste");
+    Aliado omori("Omori",100,20,"Neutral","Omori");
+    
+    Aliado aubrey("Aubrey",120,18,"Neutral","Aubrey");
 
-    Aliado equipo[4] = {
-        omori,
-        aubrey,
-        kel,
-        hero
-    };
+    Aliado kel("Kel",90,15,"Neutral","Kel");
 
-    Enemigo slime("Slime", 200, 10, "Neutral");
+    Aliado hero("Hero",110,12,"Neutral","Hero");
 
+    Aliado equipo[4] = {omori,aubrey,kel,hero};
+
+    Enemigo slime("Slime",200,10,"Neutral");
+    
     Combate pelea;
 
     pelea.iniciarPelea(equipo, 4, slime);
+    
+    Personaje* personaje;
+
+    personaje = &omori;
+    personaje->atacar(slime);
+
+    personaje = &slime;
+    personaje->atacar(omori);
 
     return 0;
 }
