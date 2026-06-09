@@ -18,13 +18,5 @@ int main() {
 
     pelea.iniciarPelea(equipo, 4, slime);
     
-    Personaje* personaje;
-
-    personaje = &omori;
-    personaje->atacar(slime);
-
-    personaje = &slime;
-    personaje->atacar(omori);
-
     return 0;
 }
