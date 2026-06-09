@@ -13,7 +13,7 @@ protected:
     int ataque;
     string emocion;
     bool vivo;
-
+    bool guardia;
 public:
     Personaje(string n, int v, int a, string e);
 
