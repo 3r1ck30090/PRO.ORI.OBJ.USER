@@ -6,14 +6,26 @@ Personaje::Personaje(string n, int v, int a, string e) {
     ataque = a;
     emocion = e;
     vivo = true;
+    guardia = false;
 }
 
-void Personaje::recibirDanio(int danio) {
-    vida = vida - danio;
+void Personaje::recibirDanio(int danio)
+{
+    if(guardia)
+    {
+        danio /= 2;
 
-    cout << nombre << " recibe " << danio << "\n";
+        cout << nombre << " bloquea parte del dano!\n";
 
-    if (vida <= 0) {
+        guardia = false;
+    }
+
+    vida -= danio;
+
+    cout << nombre << " recibe "<< danio << endl;
+
+    if(vida <= 0)
+    {
         vida = 0;
         vivo = false;
 
@@ -42,6 +54,8 @@ void Personaje::curar(int cantidad)
 
 void Personaje::activarGuardia()
 {
+    guardia = true;
+
     cout << nombre << " se pone en guardia.\n";
 }
 
