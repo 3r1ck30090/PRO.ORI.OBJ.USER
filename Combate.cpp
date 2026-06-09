@@ -10,66 +10,68 @@ void Combate::iniciarPelea(Aliado aliados[],int cantidadAliados,Enemigo &enemigo
 
         cout << "\n TURNO " << turnos << " \n";
 
-for(int i = 0; i < cantidadAliados; i++)
-{
-    if(aliados[i].estaVivo())
-    {
-        cout << "\nTurno de " << aliados[i].getNombre() << endl;
-
-        cout << "Vida: " << aliados[i].getVida() << endl;
-
-        cout << "Emocion: " << aliados[i].getEmocion() << endl;
-
-        cout << "\n1. Atacar\n";
-        cout << "2. Guardia\n";
-        cout << "3. Habilidad\n";
-
-        int opcion;
-        cin >> opcion;
-
-        switch(opcion)
+        for(int i = 0; i < cantidadAliados; i++)
         {
-            case 1:
+            if(aliados[i].estaVivo())
+            {
+                cout << "\nTurno de " << aliados[i].getNombre() << endl;
 
-                aliados[i].atacar(enemigo);
+                cout << "Vida: " << aliados[i].getVida() << endl;
 
-                break;
+                cout << "Emocion: " << aliados[i].getEmocion() << endl;
 
-            case 2:
+                cout << "\n1. Atacar\n";
+                cout << "2. Guardia\n";
+                cout << "3. Habilidad\n";
 
-                aliados[i].activarGuardia();
+                int opcion;
+                cin >> opcion;
 
-                break;
-
-            case 3:
-
-                cout << "\nSelecciona objetivo\n";
-
-                for(int j = 0; j < cantidadAliados; j++)
+                switch(opcion)
                 {
-                    cout << j + 1 << ". " << aliados[j].getNombre() << endl;
+                    case 1:
+                        aliados[i].atacar(enemigo);
+                        break;
+
+                    case 2:
+                        aliados[i].activarGuardia();
+                        break;
+
+                    case 3:
+
+                        cout << "\nSelecciona objetivo\n";
+
+                        for(int j = 0; j < cantidadAliados; j++)
+                        {
+                            cout << j + 1 << ". " << aliados[j].getNombre() << endl;
+                        }
+
+                        int objetivo;
+
+                        cin >> objetivo;
+
+                        aliados[i].habilidad(
+                            aliados[objetivo - 1]
+                        );
+
+                        break;
+
+                    default:
+
+                        aliados[i].atacar(enemigo);
                 }
 
-                int objetivo;
+                if(enemigo.estaVivo() == false)
+                {
+                    cout << "\nGANASTE!\n";
 
-                cin >> objetivo;
+                    estado = false;
 
-                aliados[i].habilidad(aliados[objetivo - 1]);
-
-                break;
-
-            default:
-
-                aliados[i].atacar(enemigo);
+                    break;
+                }
+            }
         }
 
-        if(enemigo.estaVivo() == false)
-        {
-            cout << "\nGANASTE!\n";
-
-            estado = false;
-
-            break;
-        }
+        turnos++;
     }
 }
