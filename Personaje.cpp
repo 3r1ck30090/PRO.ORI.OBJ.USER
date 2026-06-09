@@ -32,3 +32,25 @@ string Personaje::getNombre() {
 int Personaje::getVida() {
     return vida;
 }
+
+void Personaje::curar(int cantidad)
+{
+    vida += cantidad;
+
+    cout << nombre << " recupera " << cantidad << " HP.\n" << endl;
+}
+
+void Personaje::activarGuardia()
+{
+    cout << nombre << " se pone en guardia.\n";
+}
+
+void Personaje::setEmocion(string e)
+{
+    emocion = e;
+}
+
+string Personaje::getEmocion()
+{
+    return emocion;
+}
