@@ -1,5 +1,7 @@
 #include "Personaje.h"
-
+/*
+ * Inicializa los atributos basicos del personaje.
+ */
 Personaje::Personaje(string n, int v, int a, string e) {
     nombre = n;
     vida = v;
@@ -8,7 +10,10 @@ Personaje::Personaje(string n, int v, int a, string e) {
     vivo = true;
     guardia = false;
 }
-
+/*
+ * Reduce la vida del personaje.
+ * Considera el estado de guardia(menos danio).
+ */
 void Personaje::recibirDanio(int danio)
 {
     if(guardia)
@@ -44,7 +49,9 @@ string Personaje::getNombre() {
 int Personaje::getVida() {
     return vida;
 }
-
+/*
+ * Cura una cantidad fija de vida.
+ */
 void Personaje::curar()
 {
     vida += 10;
@@ -52,7 +59,9 @@ void Personaje::curar()
     cout << nombre
          << " recupera 10 HP.\n";
 }
-
+/*
+ * Cura la cantidad indicada por parametro.
+ */
 void Personaje::curar(int cantidad)
 {
     vida += cantidad;
@@ -62,14 +71,18 @@ void Personaje::curar(int cantidad)
          << cantidad
          << " HP.\n";
 }
-
+/*
+ * Activa la guardia para reducir danio recibido.
+ */
 void Personaje::activarGuardia()
 {
     guardia = true;
 
     cout << nombre << " se pone en guardia.\n";
 }
-
+/*
+ * Cambia la emocion actual del personaje.
+ */
 void Personaje::setEmocion(string e)
 {
     emocion = e;
