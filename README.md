@@ -137,7 +137,7 @@ personaje->atacar(omori);
 Aunque el apuntador es de tipo Personaje, el método ejecutado
 depende del objeto al que apunta en tiempo de ejecución gracias
 a la palabra reservada virtual.
----
+
 
 # Casos que Podrían Provocar Errores
 * Seleccionar un objetivo fuera del rango disponible.
