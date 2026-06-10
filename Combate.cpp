@@ -1,10 +1,14 @@
 #include "Combate.h"
-
+/*
+ * Inicializa el estado del combate.
+ */
 Combate::Combate(){
     turnos = 1;
     estado = true;
 }
-
+/*
+ * Gestiona los turnos de aliados y enemigo.
+ */
 void Combate::iniciarPelea(Aliado aliados[], int cantidadAliados, Enemigo &enemigo){
     
     while(enemigo.estaVivo()){
@@ -20,16 +24,21 @@ void Combate::iniciarPelea(Aliado aliados[], int cantidadAliados, Enemigo &enemi
                 cout << "Vida: " << aliados[i].getVida() << endl;
 
                 cout << "Emocion: " << aliados[i].getEmocion() << endl;
-
+/*
+ * Permite elegir una accion para el aliado.
+ */
                 cout << "\n1. Atacar\n";
                 cout << "2. Guardia\n";
                 cout << "3. Habilidad\n";
-
+                cout << "Elige una opcion:\n";
+                
                 int opcion;
                 cin >> opcion;
 
                 switch(opcion){
-                    
+                    /*
+                    * Permite atacar al enemigo.
+                    */
                     case 1:
 
                         aliados[i].atacar(enemigo);
@@ -37,13 +46,17 @@ void Combate::iniciarPelea(Aliado aliados[], int cantidadAliados, Enemigo &enemi
                         break;
 
                     case 2:
-
+                    /*
+                    * Permite protegerse del enemigo.
+                    */
                         aliados[i].activarGuardia();
 
                         break;
 
                     case 3:
-
+                    /*
+                    * Permite activar una emocion a un aliado.
+                    */
                         cout << "\nSelecciona objetivo\n";
 
                         for(int j = 0; j < cantidadAliados; j++){
@@ -66,7 +79,9 @@ void Combate::iniciarPelea(Aliado aliados[], int cantidadAliados, Enemigo &enemi
 
                         aliados[i].atacar(enemigo);
                 }
-
+                    /*
+                    * Visualiza si ya no existe ningun enemigo.
+                    */
                 if(enemigo.estaVivo() == false){
                     
                     cout << "\nGANASTE!\n";
@@ -77,6 +92,9 @@ void Combate::iniciarPelea(Aliado aliados[], int cantidadAliados, Enemigo &enemi
                 }
             }
         }
+        /*
+        * El enemigo ataca a todos los aliados vivos.
+        */
         if(enemigo.estaVivo()){
             
             cout << "\nTurno del enemigo\n";
