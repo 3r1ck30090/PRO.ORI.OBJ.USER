@@ -45,11 +45,22 @@ int Personaje::getVida() {
     return vida;
 }
 
+void Personaje::curar()
+{
+    vida += 10;
+
+    cout << nombre
+         << " recupera 10 HP.\n";
+}
+
 void Personaje::curar(int cantidad)
 {
     vida += cantidad;
 
-    cout << nombre << " recupera " << cantidad << " HP.\n" << endl;
+    cout << nombre
+         << " recupera "
+         << cantidad
+         << " HP.\n";
 }
 
 void Personaje::activarGuardia()
