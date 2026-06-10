@@ -74,10 +74,10 @@ El combate termina cuando la vida del enemigo llega a cero.
 ## Herencia
 La herencia se implementa mediante las clases derivadas:
 
-```cpp
+``
 class Aliado : public Personaje
 class Enemigo : public Personaje
-```
+``
 
 Estas clases reutilizan los atributos y métodos definidos en
 Personaje.
@@ -85,7 +85,7 @@ Personaje.
 ## Encapsulamiento
 Los atributos se encuentran protegidos mediante modificadores
 de acceso.
-```cpp
+``
 protected:
     string nombre;
     int vida;
@@ -93,47 +93,47 @@ protected:
     string emocion;
     bool vivo;
     bool guardia;
-```
+``
 El acceso a estos atributos se realiza mediante métodos públicos.
 
 ## Clase Abstracta
 La clase Personaje es abstracta porque contiene un método virtual
 puro.
-```cpp
+``
 virtual void atacar(Personaje &objetivo)=0;
-```
+``
 Debido a esto no es posible crear objetos directamente de la
 clase Personaje.
 
 ## Sobreescritura
 Las clases hijas implementan su propia versión del método atacar.
-```cpp
+``
 void Aliado::atacar(Personaje &objetivo)
-```
-```cpp
+``
+``
 void Enemigo::atacar(Personaje &objetivo)
-```
+``
 Cada implementación tiene un comportamiento diferente.
 
 ## Sobrecarga
 El método curar se encuentra sobrecargado.
-```cpp
+``
 void curar();
 void curar(int cantidad);
-```
+``
 La primera versión cura una cantidad fija y la segunda permite
 especificar la cantidad de vida a recuperar.
 
 ## Polimorfismo
 Se utiliza un apuntador de tipo Personaje para demostrar
 polimorfismo.
-```cpp
+``
 Personaje *personaje;
 personaje = &omori;
 personaje->atacar(slime);
 personaje = &slime;
 personaje->atacar(omori);
-```
+``
 Aunque el apuntador es de tipo Personaje, el método ejecutado
 depende del objeto al que apunta en tiempo de ejecución gracias
 a la palabra reservada virtual.
@@ -154,15 +154,15 @@ a la palabra reservada virtual.
 
 
 # Instrucciones de Compilación
-```
+``
 g++ main.cpp Personaje.cpp Aliado.cpp Enemigo.cpp Combate.cpp -o juego
-```
+``
 # Instrucciones de Ejecución
 ## Linux
-```
+``
 ./juego
-```
+``
 ## Windows
-```
+``
 .\juego.exe
-```
+``
