@@ -19,6 +19,7 @@ public:
 
     virtual void atacar(Personaje &objetivo)=0;
 
+    void curar();
     void curar(int cantidad);
 
     void activarGuardia();
