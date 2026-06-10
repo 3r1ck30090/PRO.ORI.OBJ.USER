@@ -139,7 +139,7 @@ depende del objeto al que apunta en tiempo de ejecución gracias
 a la palabra reservada virtual.
 
 
-# Casos que Podrían Provocar Errores
+# Casos que podrían Provocar Errores
 * Seleccionar un objetivo fuera del rango disponible.
 * Introducir valores inválidos en el menú.
 * Crear personajes con estadísticas negativas.
