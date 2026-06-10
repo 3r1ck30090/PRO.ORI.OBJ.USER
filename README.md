@@ -150,8 +150,7 @@ a la palabra reservada virtual.
 
 # Diagrama UML
 
-
-
+<img width="1540" height="1664" alt="UML_OMORI" src="https://github.com/user-attachments/assets/f0479348-5ab1-4b3d-b6a2-bb3ba709b06c" />
 
 # Instrucciones de Compilación
 ``
