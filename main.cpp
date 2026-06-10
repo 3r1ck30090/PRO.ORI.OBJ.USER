@@ -1,5 +1,12 @@
+/*
+ * Proyecto Combate Omori
+ * Erick Buendia Urbina / A01715505
+ * Programacion Orientada a Objetos
+ */
 #include "Combate.h"
-
+/*
+ * Crea personajes y ejecuta el combate.
+ */
 int main() {
 
     Aliado omori("Omori",100,20,"Neutral","Omori");
@@ -13,7 +20,9 @@ int main() {
     Aliado equipo[4] = {omori,aubrey,kel,hero};
 
     Enemigo slime("Slime",200,10,"Neutral");
-
+/*
+ * Demostracion de polimorfismo mediante Personaje*.
+ */
     Personaje *personaje;
 
     personaje = &omori;
