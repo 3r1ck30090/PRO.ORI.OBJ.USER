@@ -26,7 +26,7 @@ habilidades especiales, defenderse y recibir daño.
 * Atributos: turnos y estado.
 * Método: iniciarPelea.
 * Controla el flujo completo del combate.
----
+
 
 # Funcionamiento del Programa
 Al iniciar el programa se crean cuatro aliados:
@@ -63,14 +63,14 @@ Vuelve enojado al objetivo seleccionado.
 
 #### Hero
 Cura 25 puntos de vida al objetivo seleccionado.
----
+
 
 # Funcionamiento del Enemigo
 Después de que todos los aliados realizan su acción, el enemigo
 ataca a todos los personajes que continúan vivos (asi era más facil que escojer de forma aleatoria).
 El combate termina cuando la vida del enemigo llega a cero.
----
-# Conceptos de Programación Orientada a Objetos
+
+# Conceptos 
 ## Herencia
 La herencia se implementa mediante las clases derivadas:
 
