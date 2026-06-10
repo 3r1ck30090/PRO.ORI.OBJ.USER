@@ -2,7 +2,11 @@
 #define ENEMIGO_H
 
 #include "Personaje.h"
-
+/*
+ * Clase Enemigo
+ * Hereda de Personaje.
+ * Representa al enemigo principal del combate.
+ */
 class Enemigo : public Personaje {
 
 public:
