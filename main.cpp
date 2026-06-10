@@ -13,6 +13,14 @@ int main() {
     Aliado equipo[4] = {omori,aubrey,kel,hero};
 
     Enemigo slime("Slime",200,10,"Neutral");
+
+    Personaje *personaje;
+
+    personaje = &omori;
+    personaje->atacar(slime);
+
+    personaje = &slime;
+    personaje->atacar(omori);
     
     Combate pelea;
 
