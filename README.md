@@ -147,22 +147,22 @@ a la palabra reservada virtual.
 * Introducir datos incorrectos al momento de seleccionar una
   acción.
 
----
+
 # Diagrama UML
 
 
----
+
 
 # Instrucciones de Compilación
-```bash
+```
 g++ main.cpp Personaje.cpp Aliado.cpp Enemigo.cpp Combate.cpp -o juego
 ```
 # Instrucciones de Ejecución
 ## Linux
-```bash
+```
 ./juego
 ```
 ## Windows
-```bash
+```
 .\juego.exe
 ```
