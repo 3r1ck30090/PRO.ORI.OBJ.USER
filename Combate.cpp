@@ -9,7 +9,8 @@ Combate::Combate(){
 /*
  * Gestiona los turnos de aliados y enemigo.
  */
-void Combate::iniciarPelea(Aliado aliados[], int cantidadAliados, Enemigo &enemigo){
+void Combate::iniciarPelea(Aliado aliados[], 
+      int cantidadAliados, Enemigo &enemigo){
     
     while(enemigo.estaVivo()){
         
