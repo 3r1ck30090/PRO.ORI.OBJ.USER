@@ -139,12 +139,11 @@ a la palabra reservada virtual.
 
 
 # Casos que podrían Provocar Errores
-* Seleccionar un objetivo fuera del rango disponible.
-* Introducir valores inválidos en el menú.
+* Seleccionar un objetivo fuera del rango disponible, lo que podría causar un error al acceder a posiciones del arreglo.
+* Introducir valores inválidos en el menú, provocando que el programa no ejecute la acción esperada.
 * Crear personajes con estadísticas negativas.
-* Intentar usar personajes derrotados.
-* Introducir datos incorrectos al momento de seleccionar una
-  acción.
+* Intentar usar personajes derrotados, lo que puede afectar el comportamiento del combate..
+* Introducir datos incorrectos al momento de seleccionar una acción.
 
 
 # Diagrama UML
