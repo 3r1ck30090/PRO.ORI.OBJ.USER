@@ -1,5 +1,6 @@
 #include "Enemigo.h"
 /*
+* Constructor del enemigo.
  * Enemigo con sus atributos.
  */
 Enemigo::Enemigo(string n, int v, int a, string e)
