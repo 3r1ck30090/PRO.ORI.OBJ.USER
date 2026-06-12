@@ -12,7 +12,7 @@ class Aliado : public Personaje {
 
 private:
     string tipo;
-
+// define comportamiento especial del personaje
 public:
     Aliado(string n, int v, int a, string e, string t);
 
