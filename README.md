@@ -13,7 +13,7 @@ habilidades especiales, defenderse y recibir daño.
 
 ### Aliado
 * Hereda de Personaje.
-* Atributo adicional: tipo.
+* Atributo adicional: tipo(Para saber que habilidad hara cada personaje).
 * Métodos: atacar y habilidad.
 * Representa a los personajes controlados por el jugador.
 
@@ -63,7 +63,6 @@ Vuelve enojado al objetivo seleccionado.
 
 #### Hero
 Cura 25 puntos de vida al objetivo seleccionado.
-
 
 # Funcionamiento del Enemigo
 Después de que todos los aliados realizan su acción, el enemigo
