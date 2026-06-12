@@ -19,6 +19,10 @@ void Combate::iniciarPelea(Aliado aliados[],
  */
     while(enemigo.estaVivo()){
         bool hayVivos = false;
+/*
+* Recorre el equipo de aliados para comprobar
+* si alguno sigue con vida.
+*/
         for(int i = 0; i < cantidadAliados; i++)
         {
         if(aliados[i].estaVivo())
@@ -27,7 +31,10 @@ void Combate::iniciarPelea(Aliado aliados[],
             break;
         }
     }
-
+/*
+* Si no quedan aliados vivos,
+* se finaliza el combate.
+*/
     if(!hayVivos)
     {
         cout << "\nTODOS LOS ALIADOS HAN CAIDO...\n";
