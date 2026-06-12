@@ -31,6 +31,7 @@ void Combate::iniciarPelea(Aliado aliados[],
     if(!hayVivos)
     {
         cout << "\nTODOS LOS ALIADOS HAN CAIDO...\n";
+        cout << "\nGAME OVER EASY\n";
         break;
     }
         
