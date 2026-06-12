@@ -12,7 +12,9 @@ private:
 
 public:
     Combate();
-
+    /*
+     * Ejecuta el sistema completo de combate por turnos
+     */
     void iniciarPelea(Aliado aliados[],int cantidadAliados,Enemigo &enemigo);
 
 };
