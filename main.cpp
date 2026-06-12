@@ -21,13 +21,20 @@ int main() {
 
     Enemigo slime("Slime",200,10,"Neutral");
 /*
- * Demostracion de polimorfismo mediante Personaje*.
+ * Se crea un apuntador de tipo Personaje para
+ * demostrar el uso de polimorfismo.
  */
     Personaje *personaje;
-
+/*
+ * El apuntador referencia a Omori (Aliado).
+ * Se ejecuta Aliado::atacar().
+ */
     personaje = &omori;
     personaje->atacar(slime);
-
+/*
+ * El apuntador ahora referencia a Slime (Enemigo).
+ * Se ejecuta Enemigo::atacar().
+ */
     personaje = &slime;
     personaje->atacar(omori);
     
