@@ -13,8 +13,26 @@ Combate::Combate(){
  */
 void Combate::iniciarPelea(Aliado aliados[], 
      int cantidadAliados, Enemigo &enemigo){
-    
+/*
+ * Verifica si aún existen aliados vivos.
+ * Si todos han caído, se termina el combate.
+ */
     while(enemigo.estaVivo()){
+        bool hayVivos = false;
+        for(int i = 0; i < cantidadAliados; i++)
+        {
+        if(aliados[i].estaVivo())
+        {
+            hayVivos = true;
+            break;
+        }
+    }
+
+    if(!hayVivos)
+    {
+        cout << "\nTODOS LOS ALIADOS HAN CAIDO...\n";
+        break;
+    }
         
         cout << "\n TURNO " << turnos << " \n";
 
