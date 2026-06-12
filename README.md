@@ -3,6 +3,7 @@
 Este proyecto es una simulación sencilla de un combate por turnos
 inspirado en Omori. Trata de simular y representar personajes ya sea aliados o enemigos que pueden atacar, usar
 habilidades especiales, defenderse y recibir daño.
+PD: Este repositorio es para que el usuario interactue con el programa uno más simple y básico(hardcodeado) antes de el cambio ma-ma-masivo ma-ma-masivo es este: https://github.com/3r1ck30090/PRO.ORI.OBJ 
 ## Clases
 
 ### Personaje
