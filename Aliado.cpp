@@ -1,6 +1,8 @@
 #include "Aliado.h"
 /*
- * Inicializa un aliado con sus atributos base.
+ * Constructor de la clase Aliado
+ * Inicializa los atributos heredados de Personaje
+ * y asigna el tipo específico del aliado (Omori, Aubrey y asi)
  */
 Aliado::Aliado(string n, int v, int a, string e, string t)
 : Personaje(n, v, a, e)
@@ -8,6 +10,7 @@ Aliado::Aliado(string n, int v, int a, string e, string t)
     tipo = t;
 }
 /*
+ * Ejecuta un ataque básico al objetivo
  * Realiza un ataque con danio aumentado.
  */
 void Aliado::atacar(Personaje &objetivo)
@@ -18,6 +21,7 @@ void Aliado::atacar(Personaje &objetivo)
 }
 /*
  * Ejecuta la habilidad especial del personaje.
+ * Como curar o emocionarse.
  */
 void Aliado::habilidad(Personaje &objetivo)
 {
