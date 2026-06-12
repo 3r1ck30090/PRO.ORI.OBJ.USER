@@ -1,7 +1,8 @@
 #include "Personaje.h"
 /*
- * Inicializa los atributos basicos del personaje.
- */
+* Constructor base del personaje.
+* Inicializa los atributos basicos del personaje.
+*/
 Personaje::Personaje(string n, int v, int a, string e) {
     nombre = n;
     vida = v;
@@ -11,9 +12,10 @@ Personaje::Personaje(string n, int v, int a, string e) {
     guardia = false;
 }
 /*
- * Reduce la vida del personaje.
- * Considera el estado de guardia(menos danio).
- */
+* Aplica danio al personaje.
+* O reduce la vida del personaje.
+* Considera el estado de guardia(menos danio).
+*/
 void Personaje::recibirDanio(int danio)
 {
     if(guardia)
