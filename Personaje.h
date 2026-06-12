@@ -11,6 +11,7 @@ using namespace std;
 
 class Personaje {
 protected:
+// Atributos accesibles para clases derivadas (herencia)
     string nombre;
     int vida;
     int ataque;
