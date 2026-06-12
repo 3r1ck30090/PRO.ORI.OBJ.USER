@@ -1,5 +1,6 @@
 #include "Combate.h"
 /*
+ * Constructor del sistema de combate.
  * Inicializa el estado del combate.
  */
 Combate::Combate(){
@@ -8,6 +9,7 @@ Combate::Combate(){
 }
 /*
  * Gestiona los turnos de aliados y enemigo.
+ * Hasta que uno de los 2 llegue a 0.
  */
 void Combate::iniciarPelea(Aliado aliados[], 
      int cantidadAliados, Enemigo &enemigo){
@@ -56,7 +58,7 @@ void Combate::iniciarPelea(Aliado aliados[],
 
                     case 3:
                     /*
-                    * Permite activar una emocion a un aliado.
+                    * Permite activar una habilidad a un aliado.
                     */
                         cout << "\nSelecciona objetivo\n";
 
