@@ -13,7 +13,7 @@ habilidades especiales, defenderse y recibir daño.
 
 ### Aliado
 * Hereda de Personaje.
-* Atributo adicional: tipo(Para saber que habilidad hara cada personaje).
+* Atributo adicional: tipo(para saber que habilidad hara cada personaje).
 * Métodos: atacar y habilidad.
 * Representa a los personajes controlados por el jugador.
 
